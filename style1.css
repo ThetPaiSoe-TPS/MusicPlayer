@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New';
+}
+.container{
+    width: 100%;
+    flex-wrap: wrap;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.music-player{
+    width: 400px;
+    padding: 0px 10px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.na{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.na .circle{
+    color: #000;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    margin: 10px 0px 0px 0px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px #000;
+    cursor: pointer;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 0px 50px;
+    border: 8px solid #fff;
+}
+h1{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+p{
+    font-family: 'Garamond';
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+h1, p{
+    color: #fff;
+}
+#controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+#controls> div{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 30px ;
+}
+#controls> div> i{
+    color: #000;
+}
+#controls> div:nth-child(2){
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 0 30px 0;
+    background: #cc0808;
+}
+#controls> div:nth-child(2)> i{
+    color: #fff;
+}
+#progress{
+    -webkit-appearance: none;
+    width: 90%;
+    height: 5px;
+    background: #cc0808;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 20px;
+}
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #cc0808;
+    border: 8px solid #fff;
+    box-shadow: 0px 5px 15px #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#ctrlIcon{
+    position: relative;
+    font-size: 50px;
+    left: 4px;
+    cursor: pointer;
+}
+#controls> div> i:nth-child(1), #controls> div> i:nth-child(3){
+    cursor: pointer;
+}

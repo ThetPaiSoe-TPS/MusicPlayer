@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/21c4dcca80.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <div class="na">
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-grip-lines"></i>
+                </div>
+            </div>
+            <img src="./chanMyaeMgChoSong.jpg" alt="" class="song-img">
+            <h1>Don't Know What To Do</h1>
+            <p>Artist By Chan Myae Mg Cho</p>
+            <audio id="song">
+                <source src="./Y2meta.app - ချမ်းမြေ့မောင်ချို - Don’t Know What To Do (Lyric Video) (128 kbps).mp3" type="audio/mp3">
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div class="" id="controls">
+                <div>
+                    <i class="fa-solid fa-backward"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-play" id="ctrlIcon" onclick="playPause()"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const song= document.getElementById('song');
+        const ctrl= document.getElementById('ctrlIcon');
+        const progress= document.getElementById('progress');
+
+        const playPause= ()=> {
+            if(ctrl.classList.contains('fa-play')){
+                song.play();
+                ctrl.classList.remove('fa-play');
+                ctrl.classList.add('fa-pause');
+                ctrl.style.position= 'relative';
+                ctrl.style.marginRight= '7px';
+            }
+            else{
+                song.pause();
+                ctrl.classList.remove('fa-pause');
+                ctrl.classList.add('fa-play');
+                ctrl.style.marginRight= '0px'
+            }
+        }
+
+        setInterval(()=> {
+            progress.value= song.currentTime;
+        }, 500);
+
+        progress.onchange= ()=> {
+            song.play();
+            song.currentTime= progress.value;
+            ctrl.classList.remove('fa-play');
+            ctrl.classList.add('fa-pause');
+        }
+
+
+        
+        
+
+        
+    </script>
+</body>
+</html>
